@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Java Script</title>
+        <script>//javascript in the head of the html
+    function changeP2() {
+        document.getElementById('p2').innerHTML = 
+        'Paragraph 2 changed by JavaScript in the head!';
+    }
+    function alert2() {
+        alert("This is Alert 2 from JavaScript in the head of the html!");
+    }
+    function console2() {
+        console.log("This is Console 2 from JavaScript in the head of the html!");
+    }
+    </script>
+</head>
+<body>
+<h1>My First JavaScript Web Page</h1>
+<h4>This part is using innerHTML</h4>
+<p id="p1">This paragraph will be change by the button below.</p>
+<button type="button" onclick=changeP1()>Click Me to change the paragraph above!</button>
+<hr>
+<p id="p2">This paragraph will be changed by the javascript in the head of the html.</p>
+<button type="button" onclick=changeP2()>Click Me to change the paragraph above!</button>
+<hr>
+<p id="p3">This paragraph will be changed by the javascript in the external file.</p>
+<button type="button" onclick=changeP3()>Click Me to change the paragraph above!</button>
+<hr>
+<h4>This part will use the window alert output of a JavaScript</h4>
+<button type="button" onclick="alert1()">Click Me for an Alert1!</button>
+<button type="button" onclick="alert2()">Click Me for an Alert2!</button>
+<button type="button" onclick="alert3()">Click Me for an Alert3!</button>
+
+<hr>
+<h4>This part will use the concole output of a JavaScript</h4>
+<button type="button" onclick="console1()">Click Me for an console1!</button>
+<button type="button" onclick="console2()">Click Me for an console2!</button>
+<button type="button" onclick="console3()">Click Me for an console3!</button>
+
+<hr>
+<h4>This part will use the document.write of a JavaScript</h4>
+<button type="button" onclick="docWrite()">Click Me Document write this html</button>
+
+<script>//javascript on the body of the html
+function changeP1() {
+    document.getElementById('p1').innerHTML = 'Paragraph 1 changed by JavaScript!';
+}
+function alert1() {
+    alert("This is Alert 1 from JavaScript in the body of the html!");
+}
+function console1() {
+    console.log("This is Console 1 from JavaScript in the body of the html!");
+}
+function docWrite() {
+    document.write("<h3>This is written by document.write() method!</h3>");
+}
+</script>
+<script src="myfirstjavascript.js"></script>//external javascript file
+</body>
+</html>

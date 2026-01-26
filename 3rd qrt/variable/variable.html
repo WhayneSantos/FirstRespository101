@@ -3,18 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Variable</title>
+    <title>Variable in JavaScript</title>
 </head>
 <body>
+   <h1>JavaScript's Variables</h1> 
+   <button type="button" onclick="private_variable()">This will show the private_variable</button>
+   <script>
+    let x = 22;
+    let y = 10;
+    y = 23;
+    x = 22;
+    console.log(x + y);
+    const z = 100;
+    console.log(z);
+    let letThis = 8;
+    console.log(letThis);
+    var studentName = "August";
+    console.log(studentName);
+    function private_variable() {
+       let _y =" This is a private variable";
+       console.log(_y);
+    }
+    var $ = "This is also valid";
+    let $$ = "also valid";
+    var $$$ = "still valid";
+    console.log($);
+    console.log($$);
+    console.log($$$);
+    let declareVar;//declaration without initialization
+    declareVar = "Now it's initialized";//initialization
+    console.log(declareVar);
+    const price1 = 8;
+    const price2 = 10;
+    let total = price1 + price2;
+    console.log("Total Price: " + total);
+    autoVar = "This is an auto variable";
+    autoVar = "Reassigned auto variable";
+    console.log(autoVar);
+    let num1 = 6;
+    let num2 = 7;
+    let num3 = 8;
+    console.log(num1 + num2 + num3);
+    let text1 = "Hello, ";
+    let text2 = "World!";
+    let text3 = "!"
+    console.log(text1 + text2 + text3);
+    let a = "a", b = "b", c = "c";
+    console.log(a + b + c);
+    let addend1 = 5, addend2 = 10, addend3 = 15;
+    console.log("Sum: " + (addend1 + addend2 + addend3));
+    let minuend = 20, subtrahend = 5;
+    console.log("Difference: " + (minuend - subtrahend));
+    let multiplicand = 4, multiplier = 5;
+    console.log("Product: " + (multiplicand * multiplier));
+    let dividend = 20, divisor = 4;
+    console.log("Quotient: " + (dividend / divisor)); 
 
-    <script>
-        let x = 10;
-        let y = 5;
-        x = 10
-        y = 5
-        console.log(x + y);
-        
+    let globalVar = "I am a global variable";
+    {
+        let localVar = "I am a local variable";
+        console.log(globalVar);
+        console.log(localVar);
+    }
+    {
+        let localVar = "I am another local variable";
+        console.log(globalVar);
+        console.log(localVar);
+    }
 
+    let shadowVar = "Global Shadow Variable";
+    console.log(shadowVar);
+    let shadowVar6 = "Local Shadow Variable";
+    console.log(shadowVar6);
+
+    var reDeclareVar = "First Declaration";
+    console.log(reDeclareVar);
+    var reDeclareVar = "Second Declaration";
+    console.log(reDeclareVar);
+    hoistedVar = "I am hoisted";
+    console.log(hoistedVar);
+    var hoistedVar;
+    //let hoistedVar;
+    
+    let numBig =12345678901234567890;
+    console.log(numBig);
+    let bigInNum = 12345678901234567890n;
+    console.log(bigInNum);
+    let bigInNum2 = BigInt("12345678901234567890");
     </script>
 </body>
 </html>
