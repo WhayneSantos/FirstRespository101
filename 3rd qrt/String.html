@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String & Numbers Demo</title>
+</head>
+<body>
+
+    <h2>Add Two Numbers</h2>
+    <label for="num1">First Number</label>
+    <input id="num1" type="number" placeholder="Enter number here!" />
+
+    <label for="num2">Second Number</label>
+    <input id="num2" type="number" placeholder="Enter number here!" />
+
+    <br><br>
+    <button id="addNumbers">Add Numbers</button>
+    <p id="result"></p>
+
+    <hr>
+
+    <h2>Enrollment</h2>
+    <button id="seeEnrollment">See Enrollment</button>
+    <h4 id="ict"></h4>
+    <div id="competence"></div>
+
+    <script>
+        // ===== ADD NUMBERS =====
+        const add1 = document.getElementById("num1");
+        const add2 = document.getElementById("num2");
+        const addBtn = document.getElementById("addNumbers");
+        const result = document.getElementById("result");
+
+        addBtn.addEventListener("click", () => {
+            const n1 = Number(add1.value);
+            const n2 = Number(add2.value);
+            result.textContent = `The answer is ${n1 + n2}!`;
+        });
+
+        const enrollBtn = document.getElementById("seeEnrollment");
+        const competenceDiv = document.getElementById("competence");
+
+        enrollBtn.addEventListener("click", () => {
+            let header = "Competence";
+            let tags = ["Guardian", "Geolina", "Nazol"];
+
+            let html = `<h3>${header}</h3><ul>`;
+            for (const name of tags) {
+                html += `<li>${name}</li>`;
+            }
+            html += `</ul>`;
+
+            competenceDiv.innerHTML = html;
+        });
+
+        let str = "Hello, World";
+
+        console.log("Length:", str.length);
+        console.log("Uppercase:", str.toUpperCase());
+        console.log("Lowercase:", str.toLowerCase());
+        console.log("Substring (0-5):", str.substring(0, 5));
+        console.log("Replaced String:", str.replace("World", "JavaScript"));
+        console.log("Split String:", str.split(", "));
+    </script>
+
+</body>
+</html>
