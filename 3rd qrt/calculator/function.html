@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in Javascript</title>
+</head>
+<body>
+    <h2>My Calculator</h2>
+    <hr>
+    <h4>Addtion</h4>
+    <div>
+        <label for="add1">First Number</label>
+        <input id="add1" type="number" placeholder="Enter number here!" />
+        <br>
+        <label for="add2">Second Number</label>
+        <input id="add2" type="number" placeholder="Enter number here!" />
+        <br>
+        <button id="addBtn">Add</button>
+        <p id="add"></p>
+    </div>
+        <hr>
+    <h4>Subtrations</h4>
+    <div>
+        <label for="sub1">First Number</label>
+        <input id="sub1" type="number" placeholder="Enter number here!" />
+        <br>
+        <label for="sub2">Second Number</label>
+        <input id="sub2" type="number" placeholder="Enter number here!" />
+        <br>
+        <button id="subBtn">Subtract</button>
+        <p id="sub"></p>
+    </div>
+        <hr>
+    <h4>Multiplication</h4>
+    <div>
+        <label for="mul1">First Number</label>
+        <input id="mul1" type="number" placeholder="Enter number here!" />
+        <br>
+        <label for="mul2">Second Number</label>
+        <input id="mul2" type="number" placeholder="Enter number here!" />
+        <br>
+        <button id="mulBtn">Multiply</button>
+        <p id="mul"></p>
+    </div>
+        <hr>
+    <h4>Division</h4>
+    <div>
+        <label for="div1">First Number</label>
+        <input id="div1" type="number" placeholder="Enter number here!" />
+        <br>
+        <label for="div2">Second Number</label>
+        <input id="div2" type="number" placeholder="Enter number here!" />
+        <br>
+        <button id="divBtn">Divide</button>
+        <p id="div"></p>
+    </div>
+
+
+    <script>
+
+        addition = (add1, add2)=> add1 + add2;
+        subtraction = (sub1, sub2) => sub1 - sub2;
+        multiplication = (mul1, mul2) => mul1 * mul2;
+        division = (div1, div2) => div1 / div2;
+        
+        let addp = document.getElementById("add");
+        addp.textContent = addition(10,20);
+        let subp = document.getElementById("sub");
+        subp.textContent = subtraction(30,15);
+        let mulp = document.getElementById("mul");
+        mulp.textContent = multiplication(5,6);
+        let divp = document.getElementById("div");
+        divp.textContent = division(40,8);
+        </script>
+</body>
+</html>
