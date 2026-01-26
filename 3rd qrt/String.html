@@ -3,7 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>String & Numbers Demo</title>
+    <title>Dark Mode Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+
+        h2, h3 {
+            color: #ffffff;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            padding: 8px;
+            width: 220px;
+            margin-top: 5px;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            border: 1px solid #444;
+            border-radius: 4px;
+        }
+
+        input::placeholder {
+            color: #888;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 8px 16px;
+            background-color: #bb86fc;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #9a67ea;
+        }
+
+        #result {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #03dac6;
+        }
+
+        hr {
+            margin: 30px 0;
+            border: 1px solid #333;
+        }
+
+        ul {
+            margin-top: 10px;
+        }
+
+        li {
+            margin-left: 20px;
+        }
+    </style>
 </head>
 <body>
 
@@ -14,7 +80,7 @@
     <label for="num2">Second Number</label>
     <input id="num2" type="number" placeholder="Enter number here!" />
 
-    <br><br>
+    <br>
     <button id="addNumbers">Add Numbers</button>
     <p id="result"></p>
 
@@ -22,11 +88,9 @@
 
     <h2>Enrollment</h2>
     <button id="seeEnrollment">See Enrollment</button>
-    <h4 id="ict"></h4>
     <div id="competence"></div>
 
     <script>
-        // ===== ADD NUMBERS =====
         const add1 = document.getElementById("num1");
         const add2 = document.getElementById("num2");
         const addBtn = document.getElementById("addNumbers");
@@ -53,15 +117,6 @@
 
             competenceDiv.innerHTML = html;
         });
-
-        let str = "Hello, World";
-
-        console.log("Length:", str.length);
-        console.log("Uppercase:", str.toUpperCase());
-        console.log("Lowercase:", str.toLowerCase());
-        console.log("Substring (0-5):", str.substring(0, 5));
-        console.log("Replaced String:", str.replace("World", "JavaScript"));
-        console.log("Split String:", str.split(", "));
     </script>
 
 </body>
