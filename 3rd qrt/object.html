@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Guardians | Command Deck</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <h1>Galactic Guardians</h1>
+<p>check console</p>
+    <script>
+function Starfighter(hull,shields,energy) {
+    this.hull = 200;
+    this.shields = 100;
+    this.energy = 80;
+}
+
+function Module(power,heatLevel) {
+    this.power = 30;
+    this.heatLevel = 0;
+}
+
+console.log("--- Initializing Starfighters ---");
+const phoenix = new Starfighter();
+const interceptor = new Starfighter();
+console.log("Phoenix Unit:", phoenix);
+console.log("Interceptor Unit:", interceptor);
+console.log("\n--- Structural Damage Detected ---");
+phoenix.hull = 120;
+interceptor.hull = 45;
+console.log("Phoenix Hull Integrity:", phoenix.hull + "%");
+console.log("Interceptor Hull Integrity:", interceptor.hull + "%");
+console.log("\n--- Installing Specialized Sensors ---");
+phoenix.stealthRating = 85; 
+console.log("Phoenix Stealth Level:", phoenix.stealthRating);
+interceptor.cargoCapacity = 200;
+console.log("Interceptor Cargo Space:", interceptor.cargoCapacity);
+console.log("\n--- EMP Blast: Disabling Secondary Systems ---");
+delete phoenix.energy; 
+console.log("Phoenix Systems Post-Blast:", phoenix);
+console.log("\n--- Calibrating Weapon Modules ---");
+const laserCanon = new Module();
+const plasmaRail = new Module();
+phoenix.primaryModule = laserCanon;
+interceptor.primaryModule = plasmaRail;
+phoenix.primaryModule.power = 55;   // Overclocking
+interceptor.primaryModule.power = 15; // Low Battery
+console.log("Phoenix Weapon Config:", phoenix.primaryModule);
+console.log("Interceptor Weapon Config:", interceptor.primaryModule);
+		</script>
+</body>
+</html>
