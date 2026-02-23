@@ -1,133 +1,139 @@
+/* MODERN VARIABLES - Changing these updates the whole look */
+:root {
+  --primary: #0F706F;      /* Deep Teal */
+  --secondary: #71C0BB;    /* Light Sage */
+  --accent: #4E6688;       /* Slate Blue */
+  --text-dark: #2d3436;    /* Soft Black */
+  --glass: rgba(255, 255, 255, 0.9);
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* BASE */
 body {
-  background-color: #0F706F;
+  background: linear-gradient(135deg, #0f706f 0%, #083d3d 100%);
+  background-attachment: fixed;
   margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
 }
 
 header {
-  background-color: black;
-  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px); /* Modern blur effect */
+  padding: 60px 20px;
   text-align: center;
-  font-size: 45px;
-  color: #71C0BB;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: var(--secondary);
+  text-transform: uppercase;
 }
 
 /* LAYOUT */
 section {
   display: flex;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-/* NAV */
+/* NAV / SIDEBAR */
 nav {
-  width: 20%;
-  background: #71C0BB;
-  transition: 0.3s ease-in-out;
+  width: 25%;
+  background: var(--glass);
+  border-radius: 15px;
+  height: fit-content;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: var(--transition);
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
+  padding: 10px 0;
   margin: 0;
 }
 
 nav li a {
   display: block;
-  text-align: center;
-  padding: 15px;
-  font-size: 25px;
+  text-align: left;
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  border-left: 4px solid transparent;
 }
 
 nav li a:hover {
-  background-color: #5fa8a5;
+  background-color: rgba(113, 192, 187, 0.1);
+  border-left: 4px solid var(--primary);
+  padding-left: 30px; /* Subtle movement */
 }
 
 nav li a.active {
-  background-color: #4E6688;
+  background-color: var(--accent);
+  color: white;
 }
 
-/* LINKS */
-a {
-  color: black;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* ARTICLE */
+/* ARTICLE / CONTENT AREA */
 article {
-  width: 80%;
-  background-color: #71C0BB;
-  padding: 20px;
-  transition: 0.3s ease-in-out;
-}
-
-article a {
-  font-size: 26px;
-  display: block;
-  text-align: center;
+  width: 75%;
+  background-color: var(--glass);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
 }
 
 article p {
-  font-size: 20px;
-  text-align: center;
+  font-size: 1.1rem;
+  color: #444;
+  text-align: justify; /* More formal look */
+  margin-bottom: 20px;
 }
 
 /* FOOTER */
 footer {
-  background-color: #000;
-  padding: 10px;
-  color: #71C0BB;
-  margin-top: 20px;
-  font-size: 25px;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 40px 20px;
+  color: #888;
+  text-align: center;
+  margin-top: 60px;
 }
 
 footer p {
-  font-size: 15px;
-  text-align: left;
+  font-size: 0.9rem;
+  margin: 5px 0;
 }
 
-/* HOVER EFFECTS */
-article:hover,
-nav:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+/* GLOBAL LINK HOVER */
+a {
+  text-decoration: none;
+  transition: var(--transition);
 }
 
-a:hover {
-  background-color: #083d2d;
-  color: #71C0BB;
+/* INTERACTIVE EFFECTS */
+article:hover {
+  transform: translateY(-5px); /* Lift effect instead of scale */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
+/* RESPONSIVE DESIGN */
 @media (max-width: 900px) {
   section {
     flex-direction: column;
+    margin-top: 20px;
   }
 
-  nav {
+  nav, article {
     width: 100%;
   }
 
   nav ul {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  nav li a {
-    font-size: 18px;
-    padding: 10px;
-  }
-
-  article {
-    width: 100%;
-  }
-
-  article p {
-    font-size: 16px;
-  }
-
-  header {
-    font-size: 32px;
+    justify-content: space-around;
   }
 }
