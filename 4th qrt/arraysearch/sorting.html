@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.sort();
+        console.log(fruits); // ["Apple", "Banana", "Mango", "Orange"]
+
+        //reverse
+        fruits.reverse();
+        console.log(fruits); // ["Orange", "Mango", "Banana", "Apple"]
+
+        //to sorted
+        const sortedFruits = fruits.slice().sort();
+        console.log(sortedFruits); // ["Apple", "Banana", "Mango", "Orange"]
+    </script>
+</body>
+</html>

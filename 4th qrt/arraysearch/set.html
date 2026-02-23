@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sets</title>
+</head>
+<body>
+    <h3>Sets</h3>
+    <h6>Union of Sets</h6>
+    <script>
+
+        let fiction = new Set (["Ana" , "ben" , "Carl"]);
+        let science = new Set (["Ana" , "Ben" , "Carl"]);
+
+        let union = fiction.union(science);
+        console.log(union);
+
+        let intersection = fiction.intersection(science);
+        console.log(intersection); 
+
+        let difference = fiction.difference(science);
+        console.log(difference);
+    </script>
+</body>
+</html>

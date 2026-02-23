@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeakSet Example</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        const ws = new WeakSet();
+        let obj1 = {name: "Nobara Kugisaki"};
+        let obj2 = {name: "Yuji Itadori"};
+        ws.add(obj1);
+        ws.add(obj2);
+        document.getElementById("demo1").innerHTML = ws.has(obj1); // true
+        document.getElementById("demo2").innerHTML = ws.has(obj2); // true
+    </script>
+</body>
+</html>

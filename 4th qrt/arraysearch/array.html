@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Search</title>
+</head>
+<body>
+    <script>
+        const students = ["Santos", "Asis", "Gayon", "Banana"];
+        let result = students.indexOf("Gayon");
+        console.log(result);
+
+        const colors = ["Red", "Green", "Blue", "Yellow"];
+        let colorResult = colors.includes("Yellow");
+        console.log(colorResult);
+
+        const numbers = [4, 9, 16, 25, 29];
+        const first = numbers.find(value => value > 18);
+        console.log(first); // 25
+    </script>
+</body>
+</html>
